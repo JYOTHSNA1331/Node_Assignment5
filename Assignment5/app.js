@@ -38,7 +38,7 @@ io.on("connection", (socket) => {
             } 
         })
         console.log("User has been left the conversation",removedUser)
-        io.emit("chat message",`-----------------${removedUser.name} has left the chat-----------------`)
+        io.emit("chat message",`${removedUser.name} has left the chat`)
     })
 
     socket.on("chat message", (message) => {
